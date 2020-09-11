@@ -1,14 +1,14 @@
 const assert = require("assert").strict;
-const { ArrayUtils } = require("../lib/utils");
+const { last, flat, uniq, sharesValue } = require("../lib/utils");
 
 describe("utils", () => {
-  it("ArrayUtils.last()", () => {
-    assert.equal(ArrayUtils.last([1, 2, 3, 4]), 4);
+  it("last()", () => {
+    assert.equal(last([1, 2, 3, 4]), 4);
   });
 
-  it("ArrayUtils.flat()", () => {
+  it("flat()", () => {
     assert.deepEqual(
-      ArrayUtils.flat([
+      flat([
         ["a", "b"],
         ["c", "d"],
       ]),
@@ -16,13 +16,18 @@ describe("utils", () => {
     );
   });
 
-  it("ArrayUtils.uniq()", () => {
-    assert.deepEqual(ArrayUtils.uniq([1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5]), [
+  it("uniq()", () => {
+    assert.deepEqual(uniq([1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5]), [
       1,
       2,
       3,
       4,
       5,
     ]);
+  });
+
+  it("sharesValue()", () => {
+    assert.equal(sharesValue([1, 2, 3], [3, 4, 5]), true);
+    assert.equal(sharesValue([1, 2, 3], [4, 5, 6]), false);
   });
 });
