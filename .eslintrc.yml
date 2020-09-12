@@ -1,6 +1,10 @@
 extends: eslint:recommended
 parserOptions:
   ecmaVersion: 6
+plugins:
+  - lcom
 env:
   node: true
   es6: true
+rules:
+  lcom/lcom4: "warn"

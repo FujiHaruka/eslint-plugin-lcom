@@ -1,25 +1,26 @@
 {
   "name": "eslint-plugin-lcom",
-  "private": true,
-  "version": "1.0.0",
   "description": "",
+  "version": "1.0.0",
+  "author": "Fuji Haruka",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-plugin-lcom": "file:.",
+    "mocha": "^8.1.3",
+    "prettier": "^2.1.1"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "eslintplugin"
+  ],
+  "license": "MIT",
   "main": "lib/index.js",
+  "private": true,
   "scripts": {
     "format": "prettier --write 'lib/**/*.js' 'test/**/*.js'",
     "lint": "eslint --rulesdir lib/rules/ --rule 'lcom4: 1' 'lib/**/*.js'",
     "test": "mocha"
-  },
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin"
-  ],
-  "author": "Fuji Haruka",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^7.8.1",
-    "mocha": "^8.1.3",
-    "prettier": "^2.1.1"
-  },
-  "dependencies": {}
+  }
 }
