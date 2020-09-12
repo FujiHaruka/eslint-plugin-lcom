@@ -1,5 +1,5 @@
 const assert = require("assert").strict;
-const { last, flat, uniq, sharesValue } = require("../lib/utils");
+const { last, flat, uniq, sharesValue } = require("../lib/core/utils");
 
 describe("utils", () => {
   it("last()", () => {

@@ -3,11 +3,16 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
+  "main": "lib/index.js",
   "scripts": {
     "format": "prettier --write 'lib/**/*.js' 'test/**/*.js'",
     "test": "mocha"
   },
-  "keywords": [],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
   "author": "Fuji Haruka",
   "license": "MIT",
   "devDependencies": {

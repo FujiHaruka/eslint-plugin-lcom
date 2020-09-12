@@ -1,4 +1,4 @@
-const rule = require("../lib/lcom");
+const rule = require("../lib/rules/lcom");
 const { RuleTester } = require("eslint");
 
 const tester = new RuleTester();

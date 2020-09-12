@@ -1,6 +1,6 @@
 const assert = require("assert").strict;
-const Graph = require("../lib/graph");
-const { flat } = require("../lib/utils");
+const Graph = require("../lib/core/graph");
+const { flat } = require("../lib/core/utils");
 
 describe("Graph", () => {
   it("constructor()", () => {
