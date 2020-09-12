@@ -16,16 +16,6 @@ describe("utils", () => {
     );
   });
 
-  it("uniq()", () => {
-    assert.deepEqual(uniq([1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5]), [
-      1,
-      2,
-      3,
-      4,
-      5,
-    ]);
-  });
-
   it("sharesValue()", () => {
     assert.equal(sharesValue([1, 2, 3], [3, 4, 5]), true);
     assert.equal(sharesValue([1, 2, 3], [4, 5, 6]), false);

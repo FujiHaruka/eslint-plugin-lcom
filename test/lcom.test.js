@@ -20,12 +20,12 @@ tester.run("lcom", rule, {
     },
   ],
   invalid: [
-    //   {
-    //     code: "class A { foo() {} }",
-    //     parserOptions: { ecmaVersion: 6 },
-    //     errors: [
-    //         { type: "FunctionExpression", line: 1, column: 14, messageId: "missingThis", data: { name: "method 'foo'" } }
-    //     ]
-    // },
+    {
+      code: "class A { foo() { this.a } bar() { this.b } }",
+      parserOptions,
+      errors: [
+        { type: "ClassDeclaration", messageId: "lcomOver", data: { lcom: 2 } },
+      ],
+    },
   ],
 });
