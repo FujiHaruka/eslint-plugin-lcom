@@ -134,3 +134,5 @@ describe("Graph", () => {
     }
   });
 });
+
+/* global describe, it */

@@ -1,5 +1,5 @@
 const assert = require("assert").strict;
-const { last, flat, uniq, sharesValue } = require("../lib/core/utils");
+const { last, flat, sharesValue } = require("../lib/core/utils");
 
 describe("utils", () => {
   it("last()", () => {
@@ -21,3 +21,5 @@ describe("utils", () => {
     assert.equal(sharesValue([1, 2, 3], [4, 5, 6]), false);
   });
 });
+
+/* global describe, it */
