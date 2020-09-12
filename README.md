@@ -1,5 +1,8 @@
 # eslint-plugin-lcom
 
+![build status](https://github.com/fujiharuka/eslint-plugin-lcom/workflows/test/badge.svg)
+![npm version](https://img.shields.io/npm/v/eslint-plugin-lcom.svg)
+
 ESLint plugin to keep your JavaScript classes high cohesive by using LCOM (Lack of Cohesion of Methods) metric.
 
 ## Installation
