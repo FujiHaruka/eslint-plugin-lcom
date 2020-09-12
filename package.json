@@ -9,7 +9,6 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^7.8.1",
-    "eslint-plugin-lcom": "file:.",
     "mocha": "^8.1.3",
     "prettier": "^2.1.1"
   },
@@ -29,7 +28,8 @@
   "repository": "FujiHaruka/eslint-plugin-lcom",
   "scripts": {
     "format": "prettier --write 'lib/**/*.js' 'test/**/*.js'",
-    "lint": "eslint --rulesdir lib/rules/ --rule 'lcom4: 1' 'lib/**/*.js'",
+    "lint": "eslint 'lib/**/*.js' 'test/**/*.js'",
+    "prepare": "ln -s $PWD $PWD/node_modules/eslint-plugin-lcom",
     "test": "mocha"
   }
 }
