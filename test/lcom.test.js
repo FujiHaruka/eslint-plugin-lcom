@@ -13,8 +13,7 @@ const valid = [
     parserOptions,
   },
   {
-    code:
-      "class A { foo() {} bar() { this.foo() } }",
+    code: "class A { foo() {} bar() { this.foo() } }",
     parserOptions,
   },
   {
@@ -22,14 +21,16 @@ const valid = [
     parserOptions,
   },
   {
-    code: "class A { foo() {} bar() { this.foo() } baz() { this.bar() } hoge() { this.baz() } }",
+    code:
+      "class A { foo() {} bar() { this.foo() } baz() { this.bar() } hoge() { this.baz() } }",
     parserOptions,
   },
   {
-    code: "class A { foo() { this.a } bar() { this.b } baz() { this.a + this.b } }",
+    code:
+      "class A { foo() { this.a } bar() { this.b } baz() { this.a + this.b } }",
     parserOptions,
-  }
-]
+  },
+];
 
 const invalid = [
   {
@@ -43,10 +44,10 @@ const invalid = [
     code: "class A { foo() {} bar() { this.foo() } baz() {} }",
     parserOptions,
     errors: [
-      { type: "ClassDeclaration", messageId: "lcomOver", data: { lcom: 2 } }
-    ]
-  }
-]
+      { type: "ClassDeclaration", messageId: "lcomOver", data: { lcom: 2 } },
+    ],
+  },
+];
 
 tester.run("lcom", rule, {
   valid,
